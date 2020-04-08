@@ -2,11 +2,11 @@ import sqlite3
 import pandas as pd
 
 dbname = input("Enter name of Database:")
-conn = sqlite3.connect("./DBS"+dbname+".db")
+conn = sqlite3.connect("./DBs/"+dbname+".db")
 c = conn.cursor()
 
 path = input("Enter name of file:")
-df = pd.read_csv("./csv/"+path,index_col = [0])
+df = pd.read_csv("./csv/"+path+".csv",index_col = [0])
 
 columns = df.columns
 
@@ -50,8 +50,8 @@ for index,row in df.iterrows():
             execute_insert = execute_insert +str(row[columns[i]])+","
     execute_insert = execute_insert + str(row[columns[len(columns)-1]])+")"
     print(execute_insert)
-    #c.execute(execute_insert)    
-    #conn.commit()    
+    c.execute(execute_insert)    
+    conn.commit()    
 
 c.close()
 conn.close()

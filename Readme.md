@@ -20,9 +20,9 @@ python main.py
 ---
 Place your csv file in /csv folder then run main.py .  
 
- - Enter Name of Database you want to create. 
+ - Enter Name of Database(without extension) you want to create. 
 
- - Then name of csv file you want to convert.
+ - Then name of csv file(without extension) you want to convert.
 
  - Then the name of table you want to insert values in
 
