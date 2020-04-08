@@ -26,6 +26,13 @@ Place your csv file in /csv folder then run main.py .
 
  - Then the name of table you want to insert values in
 
+## Example
+---
+```
+Enter name of Database:example
+Enter name of csv file:ccsv
+Enter name of table:yas
+```
 ## OUTPUT
 ---
 The database will be created in /DBs folder.
